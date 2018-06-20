@@ -51,7 +51,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aeab1b9c427abd241b48f40f9a66e8dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  enemies: []
+  player: {fileID: 114081474599054872, guid: f2bc0f39ce07aec41ac87d2510c7bfb8, type: 2}
+  enemies:
+  - {fileID: 114069728588142154, guid: 2f6ca36682d7ffb4c96de9ccd5e94a31, type: 2}
+  - {fileID: 114069728588142154, guid: 2f6ca36682d7ffb4c96de9ccd5e94a31, type: 2}
+  - {fileID: 0}
   score: 0
   lives: 0
+  projectile: {fileID: 114517072751041010, guid: b879e6457e8c9de449d1187049b36fe2,
+    type: 2}

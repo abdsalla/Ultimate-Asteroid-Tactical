@@ -10,6 +10,15 @@ public class GameManager : MonoBehaviour
     public List<Enemy> enemies; // list of enemies in scene
     public float score; // game score
     public int lives; // player lives
+    public Projectile projectile;
+
+
+
+    private void Awake()
+    {
+        projectile = GetComponent<Projectile>();
+    }
+
 
     // Use this for initialization
     void Start()

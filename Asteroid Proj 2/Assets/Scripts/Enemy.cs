@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public float movespeed;
-
+    public float rotatespeed;
 
     // Use this for initialization
     void Start()

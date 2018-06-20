@@ -54,6 +54,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movespeed: 0.2
   rotatespeed: 3
+  spawndistance: 0
+  projectile: {fileID: 114517072751041010, guid: b879e6457e8c9de449d1187049b36fe2,
+    type: 2}
 --- !u!212 &212215635312073642
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -7,9 +7,12 @@ public class Player : MonoBehaviour
     private Transform trans; // creating a variable  to store GetComponent inside of it
     public float movespeed = 5.0f; // making a float variable that will represent the speed that the ship moves forward
     public float rotatespeed = 2.0f; // making a float variable that will represent the speed that the ship rotates
+    public float spawndistance;
+    public Projectile projectile;
 
     void Start()
     {
+        projectile = GetComponent<Projectile>();
         trans = GetComponent<Transform>();
     }
 
@@ -31,6 +34,12 @@ public class Player : MonoBehaviour
         {
             transform.position -= transform.right * movespeed; // moves ship in the direction it is facing when W is pressed
         }
+        if (Input.GetKey(KeyCode.Space)) // check at every frame drop for W being pressed
+        {
+
+            Instantiate(projectile, (trans.position + (trans.right * spawndistance)), GetComponent<Transform>().rotation);
+        }
+
     }
 
     void OnTriggerEnter2D(Collider2D other)
