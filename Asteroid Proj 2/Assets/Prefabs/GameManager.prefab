@@ -55,8 +55,8 @@ MonoBehaviour:
   enemies:
   - {fileID: 114069728588142154, guid: 2f6ca36682d7ffb4c96de9ccd5e94a31, type: 2}
   - {fileID: 114069728588142154, guid: 2f6ca36682d7ffb4c96de9ccd5e94a31, type: 2}
-  - {fileID: 0}
+  - {fileID: 114069728588142154, guid: 2f6ca36682d7ffb4c96de9ccd5e94a31, type: 2}
   score: 0
-  lives: 0
+  lives: 3
   projectile: {fileID: 114517072751041010, guid: b879e6457e8c9de449d1187049b36fe2,
     type: 2}

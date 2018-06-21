@@ -10,17 +10,17 @@ public class Enemy : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        GameManager.instance.enemies.Add(this); // add enemy to list on start of game
+       // GameManager.instance.enemies.Add(this); // add enemy to list on start of game
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position += transform.right * movespeed;
+      //  transform.position += transform.right * movespeed;
     }
 
     void OnDestroy() //function for what happens when an enemy is destroyed
     {
-        GameManager.instance.enemies.Remove(this);
+     //   GameManager.instance.enemies.Remove(this);
     }
 }

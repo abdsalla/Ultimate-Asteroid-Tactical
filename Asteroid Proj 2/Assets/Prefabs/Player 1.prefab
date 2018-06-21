@@ -21,6 +21,8 @@ GameObject:
   - component: {fileID: 4829492117084870}
   - component: {fileID: 212215635312073642}
   - component: {fileID: 114081474599054872}
+  - component: {fileID: 60332982959084508}
+  - component: {fileID: 50984347381475524}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Untagged
@@ -35,12 +37,64 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1094651532084026}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: -5.1241994, y: 0.02754934, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalPosition: {x: 4.09, y: 0.02754934, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+--- !u!50 &50984347381475524
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1094651532084026}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!60 &60332982959084508
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1094651532084026}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.49, y: 0.43}
+    newSize: {x: 0.49, y: 0.43}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.024999999, y: 0.21499999}
+      - {x: -0.205, y: 0.21499999}
+      - {x: -0.235, y: 0.205}
+      - {x: -0.235, y: -0.21499999}
+      - {x: 0.185, y: -0.21499999}
+      - {x: 0.235, y: -0.205}
+      - {x: 0.24499999, y: -0.195}
+      - {x: 0.24499999, y: -0.015}
 --- !u!114 &114081474599054872
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -54,8 +108,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movespeed: 0.2
   rotatespeed: 3
-  spawndistance: 0
-  projectile: {fileID: 114517072751041010, guid: b879e6457e8c9de449d1187049b36fe2,
+  spawndistance: 2
+  projectile: {fileID: 50513353998900216, guid: b879e6457e8c9de449d1187049b36fe2,
     type: 2}
 --- !u!212 &212215635312073642
 SpriteRenderer:

@@ -6,10 +6,11 @@ public class Projectile : MonoBehaviour {
 
     public float travelspeed;
     public float lifespan;
+    public GameObject projectile;
 
     void Start()
     {
-    
+        projectile = this.gameObject;
     } 
 
 
