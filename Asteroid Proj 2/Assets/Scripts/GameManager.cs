@@ -5,24 +5,36 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 
-    public static GameManager instance;
-    public Player player;
+    public static GameManager instance; // created GameManager
     public List<Enemy> enemies; // list of enemies in scene
     public float score; // game score
     public int lives; // player lives
-    public Projectile projectile;
+    private Player Pref; 
+    private int randint; 
+    public List<Vector3> spawnpoints;
+    private Vector3 spawnpointV;
+    public Transform Eprefab;
+    private int Enemycount = 3; // this is the count that is matched towards enemy count
+    public int currentEnemyCount = 0;
 
 
-
-    private void Awake()
+    void Awake()
     {
-        projectile = GetComponent<Projectile>();
+        Pref = GetComponent<Player>();
     }
 
 
-    // Use this for initialization
+    
     void Start()
     {
+        int randint = Random.Range(0, 3);
+
+
+            Instantiate(Eprefab, spawnpoints[randint], Quaternion.identity);
+            currentEnemyCount++;
+  
+
+      
         if (instance == null)
         {
             instance = this;
@@ -34,21 +46,37 @@ public class GameManager : MonoBehaviour
         }
     }
 
+
+
+
+
+
+
+
     void Update()
     {
-
-        if (lives < 0)
-        { // what to do when lives go below 0, points back to OnGameOver
-            OnGameOver();
+        if (currentEnemyCount < Enemycount)
+        {
+            randint = Random.Range(0, 3);
+            Instantiate(Eprefab, spawnpoints[randint], Quaternion.identity);
+            currentEnemyCount++;
         }
+
+
+
+
+             if (lives < 0)
+            {
+              OnGameOver();
+           }
     }
 
 
 
 
-    // Update is called once per frame
+    
     void OnGameOver()
     {
-
+        Application.Quit();
     }
 }

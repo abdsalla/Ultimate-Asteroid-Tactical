@@ -107,8 +107,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2410bb56b77d6fc4dba3da5066713abf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movespeed: 0.1
-  rotatespeed: 0
+  movespeed: 1.5
+  rotatespeed: 3
+  player: {fileID: 1094651532084026, guid: f2bc0f39ce07aec41ac87d2510c7bfb8, type: 2}
+  enemyUno: []
+  enemyDos: {fileID: 1500362804188688}
 --- !u!212 &212662162666135392
 SpriteRenderer:
   m_ObjectHideFlags: 1

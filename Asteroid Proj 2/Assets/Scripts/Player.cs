@@ -14,7 +14,6 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        
         trans = GetComponent<Transform>();
     }
 
@@ -45,6 +44,11 @@ public class Player : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Destroy(this.gameObject);
+        GameManager.instance.currentEnemyCount = 0;
+        GameManager.instance.score -= 20;
+        GameManager.instance.lives -= 1;
+        trans.position = new Vector3(0, 0, 0);
     }
+
+
 }

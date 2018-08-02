@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 50984347381475524}
   m_Layer: 0
   m_Name: Player 1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -109,6 +109,7 @@ MonoBehaviour:
   movespeed: 0.2
   rotatespeed: 3
   spawndistance: 2
+  enemycount: 0
   projectile: {fileID: 50513353998900216, guid: b879e6457e8c9de449d1187049b36fe2,
     type: 2}
 --- !u!212 &212215635312073642
