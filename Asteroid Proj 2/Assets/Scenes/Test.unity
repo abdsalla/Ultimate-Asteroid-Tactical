@@ -402,6 +402,11 @@ Prefab:
       propertyPath: spawnpoints.Array.data[0].y
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 114455618651630516, guid: ba91db81910101948ac140483d5b1083,
+        type: 2}
+      propertyPath: currentEnemyCount
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ba91db81910101948ac140483d5b1083, type: 2}
   m_IsPrefabParent: 0

@@ -10,8 +10,6 @@ public class Player : MonoBehaviour
     public float spawndistance;
     public Rigidbody2D projectile;
 
-
-
     void Start()
     {
         trans = GetComponent<Transform>();
@@ -23,32 +21,27 @@ public class Player : MonoBehaviour
         {
             trans.Rotate(Vector3.forward * rotatespeed); // rotates ship left if A is pressed
         }
-        if (Input.GetKey(KeyCode.D)) // check at every frame drop for D being pressed
+        if (Input.GetKey(KeyCode.D)) 
         {
             trans.Rotate(Vector3.back * rotatespeed); // rotates ship in the opposite direction if D is pressed, aka right
         }
-        if (Input.GetKey(KeyCode.W)) // check at every frame drop for W being pressed
+        if (Input.GetKey(KeyCode.W)) 
         {
             transform.position += transform.right * movespeed; // moves ship in the direction it is facing when W is pressed
         }
-        if (Input.GetKey(KeyCode.S)) // check at every frame drop for W being pressed
+        if (Input.GetKey(KeyCode.S)) 
         {
             transform.position -= transform.right * movespeed; // moves ship in the direction it is facing when W is pressed
         }
-        if (Input.GetKeyDown(KeyCode.Space)) // check at every frame drop for W being pressed
-        {
+        if (Input.GetKeyDown(KeyCode.Space)) {
            Instantiate(projectile, (trans.position + (trans.right * spawndistance)), GetComponent<Transform>().rotation);
         }
-
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        GameManager.instance.currentEnemyCount = 0;
         GameManager.instance.score -= 20;
         GameManager.instance.lives -= 1;
         trans.position = new Vector3(0, 0, 0);
     }
-
-
 }

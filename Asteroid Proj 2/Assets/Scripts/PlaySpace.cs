@@ -4,22 +4,22 @@ using UnityEngine;
 
 public class PlaySpace : MonoBehaviour
 {
-
-    // Use this for initialization
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     void OnTriggerExit2D(Collider2D other)
     {
-        Destroy(other.gameObject);
+        if(other.GetComponent<GameObject>().tag != "Player")
+        {
+            Destroy(other.gameObject);
+        }
     }
+
+    /* When the
+     * Outside
+     * border of
+     * the game
+     * collides with
+     * something that
+     * isn't the player,
+     * Destroy that object
+     */
 }
 
